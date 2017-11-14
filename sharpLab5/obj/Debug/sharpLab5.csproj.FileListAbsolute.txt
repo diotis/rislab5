@@ -1,0 +1,6 @@
+c:\users\user\documents\visual studio 2015\Projects\sharpLab5\sharpLab5\bin\Debug\sharpLab5.exe.config
+c:\users\user\documents\visual studio 2015\Projects\sharpLab5\sharpLab5\bin\Debug\sharpLab5.exe
+c:\users\user\documents\visual studio 2015\Projects\sharpLab5\sharpLab5\bin\Debug\sharpLab5.pdb
+c:\users\user\documents\visual studio 2015\Projects\sharpLab5\sharpLab5\obj\Debug\sharpLab5.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2015\Projects\sharpLab5\sharpLab5\obj\Debug\sharpLab5.exe
+c:\users\user\documents\visual studio 2015\Projects\sharpLab5\sharpLab5\obj\Debug\sharpLab5.pdb
