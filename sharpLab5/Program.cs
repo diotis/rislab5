@@ -7,7 +7,7 @@ using System.Xml.Linq;
 using System.IO;
 using Persona;
 using System.Runtime.Serialization.Formatters.Binary;
-
+//добавить делегаты и виртуальные функции
 namespace sharpLab5
 {
     class routes
