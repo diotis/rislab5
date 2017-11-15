@@ -120,8 +120,8 @@ namespace sharpLab5
                         }
                     }
                     reader.Close();
-                    fstr.Close();
                 }
+                fstr.Close();
             }
 
             String choise = null;
@@ -223,7 +223,12 @@ namespace sharpLab5
                             String phone = Console.ReadLine();
                             if (phone.Length > 0)
                             {
-                                foreach (Person prsn in PersonList)
+
+                                var data = from d in PersonList
+                                           where d.phone.Equals(phone)
+                                           select d;
+
+                                foreach (Person prsn in data)
                                 {
                                     if (prsn.phone.Equals(phone))
                                     {
@@ -254,4 +259,5 @@ namespace sharpLab5
 
         }
     }
+    
 }
