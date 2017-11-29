@@ -35,8 +35,6 @@ namespace sharpLab5
         static String classpath = @"C:\Users\user\Documents\Visual Studio 2015\Projects\sharpLab5\lab5.xml";
         static String textpath = @"C:\Users\user\Documents\Visual Studio 2015\Projects\sharpLab5\lab5.txt";
 
-        static List<Person> PersonList;
-
         static XElement createRoute(String id, String name, String date, String time, String free)
         {
             XElement road = new XElement("road",
@@ -49,7 +47,7 @@ namespace sharpLab5
                     );
             return road;
         }
-        public static void Serialize()
+        public static void Serialize(List<Person> PersonList)
         {
             FileStream fstr = new FileStream(textpath, FileMode.Create, FileAccess.Write);
             BinaryFormatter bf = new BinaryFormatter();
@@ -77,6 +75,7 @@ namespace sharpLab5
 
             return p;
         }
+
 
         static void Main(string[] args)
         {
@@ -233,17 +232,22 @@ namespace sharpLab5
                                     if (prsn.phone.Equals(phone))
                                     {
 
+                                        root = new XElement("Buses");
+
                                         foreach (routes road in list)
                                         {
                                             if (prsn.id_road == road.id)
                                             {
                                                 road.free++;
                                                 road.occupied--;
-                                                break;
                                             }
+                                            root.Add(createRoute(road.id,road.name,road.date,road.time, Convert.ToString(road.free)));
                                         }
+                                        root.Save(classpath);
                                         PersonList.Remove(prsn);
-                                        Serialize();
+                                        Serialize(PersonList);
+
+                                      
                                         Console.WriteLine("Билет возвращен");
                                         break;
                                     }

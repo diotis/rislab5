@@ -25,7 +25,7 @@ namespace Persona
 
     }
 
-
+    [Serializable]
     class User : Person {
         public override String vvod(String info)
         {
