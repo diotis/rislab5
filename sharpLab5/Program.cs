@@ -67,7 +67,7 @@ namespace sharpLab5
 
         static Person person()
         {
-            Person p = new Person();
+            Person p = new User();
             p.name = p.vvod("Введите имя:");
             p.lastname = p.vvod("Введите фамилию:");
             p.patronymic = p.vvod("Введите отчество:");

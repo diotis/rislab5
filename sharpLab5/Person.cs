@@ -16,15 +16,26 @@ namespace Persona
         public String num;
         public String id_road;
 
-        public String vvod(String info){
+        public virtual String vvod(String info){
             Console.WriteLine(info);
-            String data = "";
-            while (data == ""){
-                data = Console.ReadLine();
-            }
+            String data = Console.ReadLine();
             return data;
         }
 
 
+    }
+
+
+    class User : Person {
+        public override String vvod(String info)
+        {
+            Console.WriteLine(info);
+            String data = "";
+            while (data == "")
+            {
+                data = Console.ReadLine();
+            }
+            return data;
+        }
     }
 }
